@@ -13,3 +13,7 @@ export function readInput(year: number, day: number): string {
 export function readLines(year: number, day: number): string[] {
   return readInput(year, day).split(/\r?\n/);
 }
+
+export function readRanges(year: number, day: number): number[][] {
+  return readInput(year, day).split(',').map(i => i.split('-').map(Number))
+}
