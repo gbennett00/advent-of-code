@@ -1,4 +1,4 @@
-import { readInput, readRanges } from "../utils/input";
+import { readRanges } from "../utils/input";
 
 const year = 2025;
 const day = 2;
