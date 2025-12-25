@@ -8,13 +8,21 @@ const grid = readGrid(year, day);
 const xLen = grid.length
 const yLen = grid[0]?.length ?? 0
 
-let accessible = 0
-for (let x = 0; x < xLen; x++) {
-    for (let y = 0; y < yLen; y++) {
-        if (isPaper(x, y) && isAccessible(x, y)) accessible++
+let removed = 0
+let newRemoved
+do {
+    newRemoved = 0
+    for (let x = 0; x < xLen; x++) {
+        for (let y = 0; y < yLen; y++) {
+            if (isPaper(x, y) && isAccessible(x, y)) {
+                grid[x]![y] = '.'
+                newRemoved++
+            }
+        }
     }
-}
-console.log(accessible)
+    removed += newRemoved
+} while (newRemoved > 0)
+console.log(removed)
 
 function isAccessible(x: number, y: number) {
     let surroundingCount = 0
