@@ -17,3 +17,7 @@ export function readLines(year: number, day: number): string[] {
 export function readRanges(year: number, day: number): number[][] {
   return readInput(year, day).split(',').map(i => i.split('-').map(Number))
 }
+
+export function readGrid(year: number, day: number): string[][] {
+  return readLines(year, day).map(l => l.split(''))
+}
