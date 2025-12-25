@@ -7,7 +7,7 @@
         "request": "launch",
         "runtimeExecutable": "node",
         "runtimeArgs": ["--inspect-brk", "./node_modules/tsx/dist/cli.mjs"],
-        "args": ["src/days/day01.ts"],
+        "args": ["src/run-day.ts", "3"],
         "cwd": "${workspaceFolder}",
         "skipFiles": ["<node_internals>/**"],
         "console": "integratedTerminal"
